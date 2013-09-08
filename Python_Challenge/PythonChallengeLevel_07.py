@@ -12,6 +12,7 @@ if __name__ == '__main__':
     f.close()
     
     i = Image.open('oxygen.png')
+    i.show()
     print i.size
 
     row = [i.getpixel((x, i.size[1]/2)) for x in range(0, i.size[0], 7)]
