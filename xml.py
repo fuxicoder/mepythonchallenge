@@ -47,6 +47,23 @@ def fun2():
     f = open("xmlstuff.xml", "w")
     doc.writexml(f, "\t", "\t", "\n", "utf-8") 
     f.close()     
+'''
+<web-app
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+	
+	<filter>
+		<filter-name>CSRFFilter</filter-name>
+		<filter-class>test</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CSRFFilter</filter-name>
+		<url-pattern>/main/*</url-pattern>
+	</filter-mapping>
+'''
 if __name__=="__main__":
     fun2()
     pass
